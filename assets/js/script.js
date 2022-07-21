@@ -24,13 +24,13 @@ async function getStatus(e) {
 // set body text
 // show modal
 function displayStatus(data) {
+
     let heading = "API Key Status";
-    let results = `<div>Your key valid until</div`;
+    let results = `<div>Your key is valid until</div>`;
+    results += `<div class="key-status">${data.expiry}</div>`;
 
     document.getElementById("resultsModalTitle").innerText = heading;
     document.getElementById("results-content").innerHTML = results;
-
     resultsModal.show();
-
 
 }
